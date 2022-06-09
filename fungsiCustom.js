@@ -1,5 +1,5 @@
 // TODO: import module bila dibutuhkan di sini
-
+const fs = require("fs");
 
 // console.log(coba);
 // ! JANGAN DIMODIFIKASI
@@ -20,12 +20,13 @@ let modifyFile3 = (val) => {
 
 // TODO: Kerjakan bacaData
 // gunakan variabel file1, file2, dan file3
-
 const data1 = require(file1);
 const data2 = require(file2);
 const data3 = require(file3);
 
-// Fn potong nya
+
+const bacaData = (fungsiCb) => {
+  // Fn potong nya
 const FnSlice = (hasil) => {
   return hasil[1];
 }
@@ -39,9 +40,6 @@ const hasildata2 = FnSlice(arrData2);
 const hasildata3 = FnSlice(arrData3);
 // data1.message.slice(5,10);
 // console.log(arrData1);
-
-
-const bacaData = (fungsiCb) => {
   if (hasildata1 != "dunia") {
     return fungsiCb("Data Pertama salah bukan dunia", null)
   }
