@@ -19,42 +19,47 @@ let modifyFile3 = (val) => {
 };
 
 // TODO: Kerjakan bacaData
-// gunakan variabel file1, file2, dan file3
+
 const data1 = require(file1);
 const data2 = require(file2);
 const data3 = require(file3);
 
-
+// gunakan variabel file1, file2, dan file3
 const bacaData = (fungsiCb) => {
-  // Fn potong nya
-const FnSlice = (hasil) => {
-  return hasil[1];
-}
 
-const arrData1 = data1.message.split(" ");
-const arrData2 = data2[0].message.split(" ");
-const arrData3 = data3[0].data.message.split(" ");
-//deklarasi hasil
-const hasildata1 = FnSlice(arrData1);
-const hasildata2 = FnSlice(arrData2);
-const hasildata3 = FnSlice(arrData3);
-// data1.message.slice(5,10);
-// console.log(arrData1);
+  // Fn potong nya
+  const FnSlice = (hasil) => {
+    return hasil[1];
+  }
+
+  const arrData1 = data1.message.split(" ");
+  const arrData2 = data2[0].message.split(" ");
+  const arrData3 = data3[0].data.message.split(" ");
+  //deklarasi hasil
+  const hasildata1 = FnSlice(arrData1);
+  const hasildata2 = FnSlice(arrData2);
+  const hasildata3 = FnSlice(arrData3);
+  // data1.message.slice(5,10);
+  // console.log(arrData1);
   if (hasildata1 != "dunia") {
-    return fungsiCb("Data Pertama salah bukan dunia", null)
+    return fungsiCb("Data Pertama Tidak Sesuai Harapan " + hasildata1, null);
   }
   else if (hasildata2 != "world") {
-    return fungsiCb("Data Kedua salah bukan world", null)
+    return fungsiCb("Data Kedua Tidak Sesuai Harapan " + hasildata2, null);
   }
   else if (hasildata3 != "sekai") {
-    return fungsiCb("Data Ketiga salah bukan sekai", null)
+    return fungsiCb("Data Ketiga Tidak Sesuai Harapan " + hasildata3, null);
   }
   let arrFile = [];
   arrFile.push(hasildata1,hasildata2,hasildata3);
   fungsiCb(null, arrFile);
-  // console.log(arrFile);
+  
 };
 
+// bacaData((err, data) => {
+//   if (err) return console.log(err);
+//   console.log(data?.join());
+// });
 
 
 // ! JANGAN DIMODIFIKASI
