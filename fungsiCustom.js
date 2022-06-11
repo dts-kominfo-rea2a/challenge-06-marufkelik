@@ -74,9 +74,9 @@ const bacaData = (fungsiCb) => {
     const arrayOfObject = JSON.parse(data);
     const arrData1 = arrayOfObject.message.split(" ");
 
-    if (arrData1[1] != "dunia") {
-    return fungsiCb("Data Pertama Tidak Sesuai Harapan " + arrData1[1], null);
-    }
+    // if (arrData1[1] != "dunia") {
+    // return fungsiCb("Data Pertama Tidak Sesuai Harapan " + arrData1[1], null);
+    // }
 
     // return arrData1;
     // console.log(arrData1);
@@ -105,9 +105,9 @@ fs.readFile(
     // console.log(arrayOfObject);
     const arrData2 = arrayOfObject[0].message.split(" ");
 
-    if (arrData2[1] != "world") {
-          return fungsiCb("Data Kedua Tidak Sesuai Harapan " + arrData2[1], null);
-    }
+    // if (arrData2[1] != "world") {
+    //       return fungsiCb("Data Kedua Tidak Sesuai Harapan " + arrData2[1], null);
+    // }
     // return arrData1;
     // console.log(arrData1);
     arrGabungan.push(arrData2[1]);
@@ -136,9 +136,9 @@ fs.readFile(
     // console.log(arrayOfObject);
     const arrData3 = arrayOfObject[0].data.message.split(" ");
 
-    if (arrData3[1] != "sekai") {
-          return fungsiCb("Data Ketiga Tidak Sesuai Harapan " + arrData3[1], null);
-    }
+    // if (arrData3[1] != "sekai") {
+    //       return fungsiCb("Data Ketiga Tidak Sesuai Harapan " + arrData3[1], null);
+    // }
     // return arrData1;
     // console.log(arrData1);
     arrGabungan.push(arrData3[1]);
